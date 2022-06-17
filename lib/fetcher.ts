@@ -1,0 +1,10 @@
+export default (url: string, data = undefined) => {
+  return fetch(`${window.location.origin}/api${url}`, {
+    method: data ? "POST" : "GET",
+    credentials: "include",
+    headers: {
+      "Content-Type": "applicaton/json",
+    },
+    body: JSON.stringify(data),
+  });
+};
