@@ -3,7 +3,7 @@ export default (url: string, data = undefined) => {
     method: data ? "POST" : "GET",
     credentials: "include",
     headers: {
-      "Content-Type": "applicaton/json",
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
   });
