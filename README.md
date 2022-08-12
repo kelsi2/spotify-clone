@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Spotify Clone
+
+This Spotify Clone web app was built with Next.JS, TypeScript, Node.JS, and Prisma. It includes user/email authentication, home page, playlists, and music player with shuffle, repeat, play, current duration, and seek bar. This project takes advantage of different Next.js features like API routes protection by using a middleware edge function that checks users token, custom hooks with SWR to fetch user and playlists data, server side rendering to load playlists by exporting the getServerSideProps function, manages the music player state with the Easy Peasy library and synchronizes its UI updates using the requestAnimationFrame method.
+
+The live site can be found [here](https://spotify-clone-kelsi2.vercel.app/signin).
+
+**Note: The user email/pass to access the app is user@test.com/password. As the database is deployed at Heroku Free Tier it needs some minutes to awake and reload after the first authentication intent.**
+
+## Tech Stack
+
+Frontend: React.JS,Next.js, TypeScript, Chakra UI, React Howler, React Material Design Icons
+Backend: Node.JS
+Authentication: BCrypt and JWT
+API/Database: Prisma and PostgreSQL
+Deployment: Vercel and Heroku
+
+## Screenshots
+
+!["Home screen"](docs/home.png)
+!["Playlist"](docs/playlist.png)
 
 ## Getting Started
 
-First, run the development server:
+To run this project locally:
 
-```bash
-npm run dev
-# or
-yarn dev
+1. Clone this repository
+2. Yarn install
+3. Run `npx prisma migrate dev`
+4. Go to Heroku and create a new project 
+5. Create 2 databases within that project
+6. Create an `env` file:
+```js
+DATABASE_URL="URL1"
+SHADOW_DATABASE_URL="URL2"
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+7. Run `yarn dev` to start the project
+8. Go to `localhost:3000` to view the project
+9. Login with `user@test.com/password`
