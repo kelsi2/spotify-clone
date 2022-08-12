@@ -8,11 +8,11 @@ The live site can be found [here](https://spotify-clone-kelsi2.vercel.app/signin
 
 ## Tech Stack
 
-Frontend: React.JS,Next.js, TypeScript, Chakra UI, React Howler, React Material Design Icons
-Backend: Node.JS
-Authentication: BCrypt and JWT
-API/Database: Prisma and PostgreSQL
-Deployment: Vercel and Heroku
+Frontend: React.JS,Next.js, TypeScript, Chakra UI, React Howler, React Material Design Icons<br />
+Backend: Node.JS<br />
+Authentication: BCrypt and JWT<br />
+API/Database: Prisma and PostgreSQL<br />
+Deployment: Vercel and Heroku<br />
 
 ## Screenshots
 
